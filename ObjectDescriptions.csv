@@ -1,0 +1,13 @@
+﻿dbo.BuildVersion,"Current version number of the AdventureWorksLT 2012 sample database. "
+dbo.ErrorLog,Audit table tracking errors in the the AdventureWorks database that are caught by the CATCH block of a TRY...CATCH construct. Data is inserted by stored procedure dbo.uspLogError when it is executed from inside the CATCH block of a TRY...CATCH construct.
+SalesLT.Address,Street address information for customers.
+SalesLT.Customer,Customer information.
+SalesLT.CustomerAddress,Cross-reference table mapping customers to their address(es).
+SalesLT.Product,Products sold or used in the manfacturing of sold products.
+SalesLT.ProductCategory,High-level product categorization.
+SalesLT.ProductDescription,Product descriptions in several languages.
+SalesLT.ProductModelProductDescription,Cross-reference table mapping product descriptions and the language the description is written in.
+SalesLT.SalesOrderDetail,Individual products associated with a specific sales order. See SalesOrderHeader.
+SalesLT.SalesOrderHeader,General sales order information.
+SalesLT.vProductAndDescription,Product names and descriptions. Product descriptions are provided in multiple languages.
+SalesLT.vProductModelCatalogDescription,Displays the content from each element in the xml column CatalogDescription for each product in the Sales.ProductModel table that has catalog data.
