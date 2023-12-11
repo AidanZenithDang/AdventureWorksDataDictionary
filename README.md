@@ -11,7 +11,8 @@ SELECT
   CONCAT(it.TABLE_SCHEMA, '.', it.TABLE_NAME) AS FULL_NAME,
   OBJECT_ID(CONCAT(it.TABLE_SCHEMA, '.', it.TABLE_NAME)) AS table_id
 FROM
-  INFORMATION_SCHEMA.TABLES AS it
+  INFORMATION_SCHEMA.TABLES AS it;
+
 SELECT
   t.full_name AS table_name,
   CAST(ep.value AS nvarchar(MAX)) AS description
