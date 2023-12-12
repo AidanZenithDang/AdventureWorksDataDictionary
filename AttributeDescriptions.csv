@@ -1,118 +1,118 @@
-﻿BuildVersion,dbo,dbo.BuildVersion,SystemInformationID,Primary key for BuildVersion records.
-BuildVersion,dbo,dbo.BuildVersion,Database Version,Version number of the database in 9.yy.mm.dd.00 format.
-BuildVersion,dbo,dbo.BuildVersion,VersionDate,Date and time the record was last updated.
-BuildVersion,dbo,dbo.BuildVersion,ModifiedDate,Date and time the record was last updated.
-ErrorLog,dbo,dbo.ErrorLog,ErrorLogID,Clustered index created by a primary key constraint.
-ErrorLog,dbo,dbo.ErrorLog,ErrorLogID,Primary key for ErrorLog records.
-ErrorLog,dbo,dbo.ErrorLog,ErrorTime,The date and time at which the error occurred.
-ErrorLog,dbo,dbo.ErrorLog,UserName,The user who executed the batch in which the error occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorNumber,The error number of the error that occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorSeverity,The severity of the error that occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorState,The state number of the error that occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorProcedure,The name of the stored procedure or trigger where the error occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorLine,The line number at which the error occurred.
-ErrorLog,dbo,dbo.ErrorLog,ErrorMessage,The message text of the error that occurred.
-Address,SalesLT,SalesLT.Address,AddressID,Clustered index created by a primary key constraint.
-Address,SalesLT,SalesLT.Address,AddressID,Primary key for Address records.
-Address,SalesLT,SalesLT.Address,AddressLine1,First street address line.
-Address,SalesLT,SalesLT.Address,AddressLine2,Second street address line.
-Address,SalesLT,SalesLT.Address,AddressLine2,Nonclustered index.
-Address,SalesLT,SalesLT.Address,City,Nonclustered index.
-Address,SalesLT,SalesLT.Address,City,Name of the city.
-Address,SalesLT,SalesLT.Address,StateProvince,Name of state or province.
-Address,SalesLT,SalesLT.Address,PostalCode,Postal code for the street address.
-Address,SalesLT,SalesLT.Address,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-Address,SalesLT,SalesLT.Address,ModifiedDate,Date and time the record was last updated.
-Customer,SalesLT,SalesLT.Customer,CustomerID,Primary key for Customer records.
-Customer,SalesLT,SalesLT.Customer,CustomerID,Clustered index created by a primary key constraint.
-Customer,SalesLT,SalesLT.Customer,NameStyle,"0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order."
-Customer,SalesLT,SalesLT.Customer,Title,"A courtesy title. For example, Mr. or Ms."
-Customer,SalesLT,SalesLT.Customer,Title,Nonclustered index.
-Customer,SalesLT,SalesLT.Customer,FirstName,First name of the person.
-Customer,SalesLT,SalesLT.Customer,MiddleName,Middle name or middle initial of the person.
-Customer,SalesLT,SalesLT.Customer,LastName,Last name of the person.
-Customer,SalesLT,SalesLT.Customer,Suffix,"Surname suffix. For example, Sr. or Jr."
-Customer,SalesLT,SalesLT.Customer,CompanyName,The customer's organization.
-Customer,SalesLT,SalesLT.Customer,SalesPerson,"The customer's sales person, an employee of AdventureWorks Cycles."
-Customer,SalesLT,SalesLT.Customer,EmailAddress,E-mail address for the person.
-Customer,SalesLT,SalesLT.Customer,Phone,Phone number associated with the person.
-Customer,SalesLT,SalesLT.Customer,PasswordHash,Password for the e-mail account.
-Customer,SalesLT,SalesLT.Customer,PasswordSalt,Random value concatenated with the password string before the password is hashed.
-Customer,SalesLT,SalesLT.Customer,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-Customer,SalesLT,SalesLT.Customer,ModifiedDate,Date and time the record was last updated.
-CustomerAddress,SalesLT,SalesLT.CustomerAddress,CustomerID,Primary key. Foreign key to Customer.CustomerID.
-CustomerAddress,SalesLT,SalesLT.CustomerAddress,AddressID,Primary key. Foreign key to Address.AddressID.
-CustomerAddress,SalesLT,SalesLT.CustomerAddress,AddressType,"The kind of Address. One of: Archive, Billing, Home, Main Office, Primary, Shipping"
-CustomerAddress,SalesLT,SalesLT.CustomerAddress,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-CustomerAddress,SalesLT,SalesLT.CustomerAddress,ModifiedDate,Date and time the record was last updated.
-Product,SalesLT,SalesLT.Product,ProductID,Primary key for Product records.
-Product,SalesLT,SalesLT.Product,ProductID,Clustered index created by a primary key constraint.
-Product,SalesLT,SalesLT.Product,Name,Name of the product.
-Product,SalesLT,SalesLT.Product,ProductNumber,Unique product identification number.
-Product,SalesLT,SalesLT.Product,Color,Product color.
-Product,SalesLT,SalesLT.Product,StandardCost,Standard cost of the product.
-Product,SalesLT,SalesLT.Product,ListPrice,Selling price.
-Product,SalesLT,SalesLT.Product,Size,Product size.
-Product,SalesLT,SalesLT.Product,Weight,Product weight.
-Product,SalesLT,SalesLT.Product,ProductCategoryID,"Product is a member of this product category. Foreign key to ProductCategory.ProductCategoryID. "
-Product,SalesLT,SalesLT.Product,ProductModelID,Product is a member of this product model. Foreign key to ProductModel.ProductModelID.
-Product,SalesLT,SalesLT.Product,SellStartDate,Date the product was available for sale.
-Product,SalesLT,SalesLT.Product,SellEndDate,Date the product was no longer available for sale.
-Product,SalesLT,SalesLT.Product,DiscontinuedDate,Date the product was discontinued.
-Product,SalesLT,SalesLT.Product,ThumbNailPhoto,Small image of the product.
-Product,SalesLT,SalesLT.Product,ThumbnailPhotoFileName,Small image file name.
-Product,SalesLT,SalesLT.Product,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-Product,SalesLT,SalesLT.Product,ModifiedDate,Date and time the record was last updated.
-ProductCategory,SalesLT,SalesLT.ProductCategory,ProductCategoryID,Primary key for ProductCategory records.
-ProductCategory,SalesLT,SalesLT.ProductCategory,ProductCategoryID,Clustered index created by a primary key constraint.
-ProductCategory,SalesLT,SalesLT.ProductCategory,ParentProductCategoryID,Product category identification number of immediate ancestor category. Foreign key to ProductCategory.ProductCategoryID.
-ProductCategory,SalesLT,SalesLT.ProductCategory,Name,Category description.
-ProductCategory,SalesLT,SalesLT.ProductCategory,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-ProductCategory,SalesLT,SalesLT.ProductCategory,ModifiedDate,Date and time the record was last updated.
-ProductDescription,SalesLT,SalesLT.ProductDescription,ProductDescriptionID,Primary key for ProductDescription records.
-ProductDescription,SalesLT,SalesLT.ProductDescription,ProductDescriptionID,Clustered index created by a primary key constraint.
-ProductDescription,SalesLT,SalesLT.ProductDescription,Description,Description of the product.
-ProductDescription,SalesLT,SalesLT.ProductDescription,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-ProductDescription,SalesLT,SalesLT.ProductDescription,ModifiedDate,Date and time the record was last updated.
-ProductModel,SalesLT,SalesLT.ProductModel,ProductModelID,Clustered index created by a primary key constraint.
-ProductModelProductDescription,SalesLT,SalesLT.ProductModelProductDescription,ProductModelID,Clustered index created by a primary key constraint.
-ProductModelProductDescription,SalesLT,SalesLT.ProductModelProductDescription,ProductModelID,Primary key. Foreign key to ProductModel.ProductModelID.
-ProductModelProductDescription,SalesLT,SalesLT.ProductModelProductDescription,ProductDescriptionID,Primary key. Foreign key to ProductDescription.ProductDescriptionID.
-ProductModelProductDescription,SalesLT,SalesLT.ProductModelProductDescription,Culture,The culture for which the description is written
-ProductModelProductDescription,SalesLT,SalesLT.ProductModelProductDescription,ModifiedDate,Date and time the record was last updated.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,SalesOrderID,Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,SalesOrderID,Clustered index created by a primary key constraint.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,SalesOrderDetailID,Primary key. One incremental unique number per product sold.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,OrderQty,Quantity ordered per product.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,OrderQty,Nonclustered index.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,ProductID,Product sold to customer. Foreign key to Product.ProductID.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,UnitPrice,Selling price of a single product.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,UnitPriceDiscount,Discount amount.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,LineTotal,Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-SalesOrderDetail,SalesLT,SalesLT.SalesOrderDetail,ModifiedDate,Date and time the record was last updated.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,SalesOrderID,Primary key.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,SalesOrderID,Clustered index created by a primary key constraint.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,RevisionNumber,Incremental number to track changes to the sales order over time.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,OrderDate,Dates the sales order was created.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,DueDate,Date the order is due to the customer.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,ShipDate,Date the order was shipped to the customer.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,ShipDate,Nonclustered index.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,Status,Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,OnlineOrderFlag,0 = Order placed by sales person. 1 = Order placed online by customer.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,SalesOrderNumber,Unique sales order identification number.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,PurchaseOrderNumber,"Customer purchase order number reference. "
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,AccountNumber,Financial accounting number reference.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,CustomerID,Customer identification number. Foreign key to Customer.CustomerID.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,ShipToAddressID,The ID of the location to send goods.  Foreign key to the Address table.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,BillToAddressID,The ID of the location to send invoices.  Foreign key to the Address table.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,ShipMethod,Shipping method. Foreign key to ShipMethod.ShipMethodID.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,CreditCardApprovalCode,Approval code provided by the credit card company.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,SubTotal,Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal)for the appropriate SalesOrderID.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,TaxAmt,Tax amount.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,Freight,Shipping cost.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,TotalDue,Total due from customer. Computed as Subtotal + TaxAmt + Freight.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,Comment,Sales representative comments.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-SalesOrderHeader,SalesLT,SalesLT.SalesOrderHeader,ModifiedDate,Date and time the record was last updated.
-vProductAndDescription,SalesLT,SalesLT.vProductAndDescription,ProductID,Clustered index on the view vProductAndDescription.
+﻿dbo,BuildVersion,dbo.BuildVersion,SystemInformationID,Primary key for BuildVersion records.
+dbo,BuildVersion,dbo.BuildVersion,Database Version,Version number of the database in 9.yy.mm.dd.00 format.
+dbo,BuildVersion,dbo.BuildVersion,VersionDate,Date and time the record was last updated.
+dbo,BuildVersion,dbo.BuildVersion,ModifiedDate,Date and time the record was last updated.
+dbo,ErrorLog,dbo.ErrorLog,ErrorLogID,Clustered index created by a primary key constraint.
+dbo,ErrorLog,dbo.ErrorLog,ErrorLogID,Primary key for ErrorLog records.
+dbo,ErrorLog,dbo.ErrorLog,ErrorTime,The date and time at which the error occurred.
+dbo,ErrorLog,dbo.ErrorLog,UserName,The user who executed the batch in which the error occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorNumber,The error number of the error that occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorSeverity,The severity of the error that occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorState,The state number of the error that occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorProcedure,The name of the stored procedure or trigger where the error occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorLine,The line number at which the error occurred.
+dbo,ErrorLog,dbo.ErrorLog,ErrorMessage,The message text of the error that occurred.
+SalesLT,Address,SalesLT.Address,AddressID,Clustered index created by a primary key constraint.
+SalesLT,Address,SalesLT.Address,AddressID,Primary key for Address records.
+SalesLT,Address,SalesLT.Address,AddressLine1,First street address line.
+SalesLT,Address,SalesLT.Address,AddressLine2,Second street address line.
+SalesLT,Address,SalesLT.Address,AddressLine2,Nonclustered index.
+SalesLT,Address,SalesLT.Address,City,Nonclustered index.
+SalesLT,Address,SalesLT.Address,City,Name of the city.
+SalesLT,Address,SalesLT.Address,StateProvince,Name of state or province.
+SalesLT,Address,SalesLT.Address,PostalCode,Postal code for the street address.
+SalesLT,Address,SalesLT.Address,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,Address,SalesLT.Address,ModifiedDate,Date and time the record was last updated.
+SalesLT,Customer,SalesLT.Customer,CustomerID,Primary key for Customer records.
+SalesLT,Customer,SalesLT.Customer,CustomerID,Clustered index created by a primary key constraint.
+SalesLT,Customer,SalesLT.Customer,NameStyle,"0 = The data in FirstName and LastName are stored in western style (first name, last name) order.  1 = Eastern style (last name, first name) order."
+SalesLT,Customer,SalesLT.Customer,Title,"A courtesy title. For example, Mr. or Ms."
+SalesLT,Customer,SalesLT.Customer,Title,Nonclustered index.
+SalesLT,Customer,SalesLT.Customer,FirstName,First name of the person.
+SalesLT,Customer,SalesLT.Customer,MiddleName,Middle name or middle initial of the person.
+SalesLT,Customer,SalesLT.Customer,LastName,Last name of the person.
+SalesLT,Customer,SalesLT.Customer,Suffix,"Surname suffix. For example, Sr. or Jr."
+SalesLT,Customer,SalesLT.Customer,CompanyName,The customer's organization.
+SalesLT,Customer,SalesLT.Customer,SalesPerson,"The customer's sales person, an employee of AdventureWorks Cycles."
+SalesLT,Customer,SalesLT.Customer,EmailAddress,E-mail address for the person.
+SalesLT,Customer,SalesLT.Customer,Phone,Phone number associated with the person.
+SalesLT,Customer,SalesLT.Customer,PasswordHash,Password for the e-mail account.
+SalesLT,Customer,SalesLT.Customer,PasswordSalt,Random value concatenated with the password string before the password is hashed.
+SalesLT,Customer,SalesLT.Customer,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,Customer,SalesLT.Customer,ModifiedDate,Date and time the record was last updated.
+SalesLT,CustomerAddress,SalesLT.CustomerAddress,CustomerID,Primary key. Foreign key to Customer.CustomerID.
+SalesLT,CustomerAddress,SalesLT.CustomerAddress,AddressID,Primary key. Foreign key to Address.AddressID.
+SalesLT,CustomerAddress,SalesLT.CustomerAddress,AddressType,"The kind of Address. One of: Archive, Billing, Home, Main Office, Primary, Shipping"
+SalesLT,CustomerAddress,SalesLT.CustomerAddress,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,CustomerAddress,SalesLT.CustomerAddress,ModifiedDate,Date and time the record was last updated.
+SalesLT,Product,SalesLT.Product,ProductID,Primary key for Product records.
+SalesLT,Product,SalesLT.Product,ProductID,Clustered index created by a primary key constraint.
+SalesLT,Product,SalesLT.Product,Name,Name of the product.
+SalesLT,Product,SalesLT.Product,ProductNumber,Unique product identification number.
+SalesLT,Product,SalesLT.Product,Color,Product color.
+SalesLT,Product,SalesLT.Product,StandardCost,Standard cost of the product.
+SalesLT,Product,SalesLT.Product,ListPrice,Selling price.
+SalesLT,Product,SalesLT.Product,Size,Product size.
+SalesLT,Product,SalesLT.Product,Weight,Product weight.
+SalesLT,Product,SalesLT.Product,ProductCategoryID,"Product is a member of this product category. Foreign key to ProductCategory.ProductCategoryID. "
+SalesLT,Product,SalesLT.Product,ProductModelID,Product is a member of this product model. Foreign key to ProductModel.ProductModelID.
+SalesLT,Product,SalesLT.Product,SellStartDate,Date the product was available for sale.
+SalesLT,Product,SalesLT.Product,SellEndDate,Date the product was no longer available for sale.
+SalesLT,Product,SalesLT.Product,DiscontinuedDate,Date the product was discontinued.
+SalesLT,Product,SalesLT.Product,ThumbNailPhoto,Small image of the product.
+SalesLT,Product,SalesLT.Product,ThumbnailPhotoFileName,Small image file name.
+SalesLT,Product,SalesLT.Product,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,Product,SalesLT.Product,ModifiedDate,Date and time the record was last updated.
+SalesLT,ProductCategory,SalesLT.ProductCategory,ProductCategoryID,Primary key for ProductCategory records.
+SalesLT,ProductCategory,SalesLT.ProductCategory,ProductCategoryID,Clustered index created by a primary key constraint.
+SalesLT,ProductCategory,SalesLT.ProductCategory,ParentProductCategoryID,Product category identification number of immediate ancestor category. Foreign key to ProductCategory.ProductCategoryID.
+SalesLT,ProductCategory,SalesLT.ProductCategory,Name,Category description.
+SalesLT,ProductCategory,SalesLT.ProductCategory,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,ProductCategory,SalesLT.ProductCategory,ModifiedDate,Date and time the record was last updated.
+SalesLT,ProductDescription,SalesLT.ProductDescription,ProductDescriptionID,Primary key for ProductDescription records.
+SalesLT,ProductDescription,SalesLT.ProductDescription,ProductDescriptionID,Clustered index created by a primary key constraint.
+SalesLT,ProductDescription,SalesLT.ProductDescription,Description,Description of the product.
+SalesLT,ProductDescription,SalesLT.ProductDescription,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,ProductDescription,SalesLT.ProductDescription,ModifiedDate,Date and time the record was last updated.
+SalesLT,ProductModel,SalesLT.ProductModel,ProductModelID,Clustered index created by a primary key constraint.
+SalesLT,ProductModelProductDescription,SalesLT.ProductModelProductDescription,ProductModelID,Clustered index created by a primary key constraint.
+SalesLT,ProductModelProductDescription,SalesLT.ProductModelProductDescription,ProductModelID,Primary key. Foreign key to ProductModel.ProductModelID.
+SalesLT,ProductModelProductDescription,SalesLT.ProductModelProductDescription,ProductDescriptionID,Primary key. Foreign key to ProductDescription.ProductDescriptionID.
+SalesLT,ProductModelProductDescription,SalesLT.ProductModelProductDescription,Culture,The culture for which the description is written
+SalesLT,ProductModelProductDescription,SalesLT.ProductModelProductDescription,ModifiedDate,Date and time the record was last updated.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,SalesOrderID,Primary key. Foreign key to SalesOrderHeader.SalesOrderID.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,SalesOrderID,Clustered index created by a primary key constraint.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,SalesOrderDetailID,Primary key. One incremental unique number per product sold.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,OrderQty,Quantity ordered per product.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,OrderQty,Nonclustered index.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,ProductID,Product sold to customer. Foreign key to Product.ProductID.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,UnitPrice,Selling price of a single product.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,UnitPriceDiscount,Discount amount.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,LineTotal,Per product subtotal. Computed as UnitPrice * (1 - UnitPriceDiscount) * OrderQty.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,SalesOrderDetail,SalesLT.SalesOrderDetail,ModifiedDate,Date and time the record was last updated.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,SalesOrderID,Primary key.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,SalesOrderID,Clustered index created by a primary key constraint.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,RevisionNumber,Incremental number to track changes to the sales order over time.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,OrderDate,Dates the sales order was created.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,DueDate,Date the order is due to the customer.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,ShipDate,Date the order was shipped to the customer.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,ShipDate,Nonclustered index.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,Status,Order current status. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,OnlineOrderFlag,0 = Order placed by sales person. 1 = Order placed online by customer.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,SalesOrderNumber,Unique sales order identification number.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,PurchaseOrderNumber,"Customer purchase order number reference. "
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,AccountNumber,Financial accounting number reference.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,CustomerID,Customer identification number. Foreign key to Customer.CustomerID.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,ShipToAddressID,The ID of the location to send goods.  Foreign key to the Address table.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,BillToAddressID,The ID of the location to send invoices.  Foreign key to the Address table.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,ShipMethod,Shipping method. Foreign key to ShipMethod.ShipMethodID.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,CreditCardApprovalCode,Approval code provided by the credit card company.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,SubTotal,Sales subtotal. Computed as SUM(SalesOrderDetail.LineTotal)for the appropriate SalesOrderID.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,TaxAmt,Tax amount.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,Freight,Shipping cost.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,TotalDue,Total due from customer. Computed as Subtotal + TaxAmt + Freight.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,Comment,Sales representative comments.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,rowguid,ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+SalesLT,SalesOrderHeader,SalesLT.SalesOrderHeader,ModifiedDate,Date and time the record was last updated.
+SalesLT,vProductAndDescription,SalesLT.vProductAndDescription,ProductID,Clustered index on the view vProductAndDescription.
